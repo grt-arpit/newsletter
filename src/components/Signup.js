@@ -19,7 +19,7 @@ const Signup = () => {
         Swal.fire({
           icon: "success",
           title: "Success",
-          text: "Registration successful",
+          text: "Sign Up successful",
         });
       }else{
         Swal.fire({
