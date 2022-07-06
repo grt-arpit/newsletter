@@ -6,7 +6,7 @@ const Preview = () => {
       <div className="container">
         <div className="card">
           <div className="card-body">
-            <h2>this is a heading</h2>
+            <h2>preview box heading</h2>
             <hr />
             <input
               className="form-control"
