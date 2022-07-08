@@ -60,7 +60,7 @@ const Signup = () => {
                 <label className="mt-4">Username</label>
                 <input
                   className="form-control"
-                  placeholder="Userame"
+                  placeholder="Username"
                   value={values.username}
                   id="username"
                   onChange={handleChange}
