@@ -4,6 +4,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Header from './components/Header';
 import Preview from './components/Preview';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route element={<Login/>} path="login"/>
       <Route element={<Signup/>} path="signup"/>
       <Route element={<Preview/>} path="preview"/>
+      <Route element={<Dashboard/>} path="dashboard"/>
 
       </Routes>
      </BrowserRouter>

@@ -16,13 +16,14 @@ if(rootElemment){
     </React.StrictMode>
   );
 }
-// const preview = ReactDOM.createRoot(document.getElementById('preview'));
-
-// preview.render(
-//   <React.StrictMode>
-//     <Preview />
-//   </React.StrictMode>
-// );
+const preview = ReactDOM.createRoot(document.getElementById('preview'));
+const key = document.getElementById('preview').getAttribute('owner-id');
+console.log(key);
+preview.render(
+  <React.StrictMode>
+    <Preview ownerkey={key}/>
+  </React.StrictMode>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

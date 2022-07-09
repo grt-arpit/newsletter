@@ -2,10 +2,11 @@ import { Formik } from "formik";
 import React from "react";
 import Swal from "sweetalert2";
 
-const Preview = () => {
+const Preview = ({ownerkey}) => {
 
  const suscribeSubmit=(data)=>{
  console.log(data);
+ 
 
  fetch("http://localhost:5000/Suscribe/sscrib",{
   method:"POST",
@@ -18,7 +19,7 @@ const Preview = () => {
     Swal.fire({
       icon: "success",
       title: "Success",
-      text: "Sign Up successful",
+      text: "preview successful",
     });
   }else{
     Swal.fire({
@@ -33,6 +34,7 @@ const Preview = () => {
   return (
     <div className="p-5 ">
       <div className="container">
+        <h1>Key : {ownerkey}</h1>
         <div className="card">
           <div className="card-body">
             <h2>preview box heading</h2>
@@ -41,6 +43,7 @@ const Preview = () => {
             initialValues={{
               name:"",
               email:"",
+              owner:ownerkey,
             }}
             onSubmit={suscribeSubmit}
             >
@@ -52,6 +55,14 @@ const Preview = () => {
               placeholder="name"
               value={values.name}
               id="name"
+              onChange={handleChange}
+            />
+            <label className="mt-4">owner</label>
+            <input
+              className="form-control"
+              placeholder="owner"
+              value={values.owner}
+              id="owner"
               onChange={handleChange}
             />
             <label className="mt-4">Email</label>
