@@ -5,6 +5,7 @@ import Signup from './components/Signup';
 import Header from './components/Header';
 import Preview from './components/Preview';
 import Dashboard from './components/Dashboard';
+import Form from './components/Form';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route element={<Signup/>} path="signup"/>
       <Route element={<Preview/>} path="preview"/>
       <Route element={<Dashboard/>} path="dashboard"/>
+      <Route element={<Form/>} path="form"/>
 
       </Routes>
      </BrowserRouter>

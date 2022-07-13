@@ -44,6 +44,16 @@ const Header = () => {
               <NavLink className="nav-link" to="preview">
                  Preview
                 </NavLink>
+                </li>
+                <li className="nav-item">
+              <NavLink className="nav-link" to="dashboard">
+                 Dashboard
+                </NavLink>
+              </li>
+                <li className="nav-item">
+              <NavLink className="nav-link" to="form">
+                 Form
+                </NavLink>
               </li>
               
             </ul>

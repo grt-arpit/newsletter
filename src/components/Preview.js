@@ -43,7 +43,7 @@ const Preview = ({ownerkey}) => {
             initialValues={{
               name:"",
               email:"",
-              owner:ownerkey,
+              owner:ownerkey  ,
             }}
             onSubmit={suscribeSubmit}
             >
