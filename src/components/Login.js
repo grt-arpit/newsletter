@@ -1,12 +1,44 @@
 import { TextField, Button } from "@mui/material";
 import { Formik } from "formik";
 import React from "react";
+import Swal from "sweetalert2";
 import * as Yup from "yup";
 
 const Login = () => {
   
 
-   
+  const handleFormSubmit = (formdata) => {
+    console.log("Form submitted!!");
+    console.log(formdata);
+
+    fetch('http://localhost:5000/user/authenticate', {
+      method: 'POST',
+      body : JSON.stringify(formdata),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => {
+      if(res.status === 200){
+        Swal.fire({
+          icon : 'success',
+          title : 'Success',
+          text : 'Login Successful'
+        })
+        res.json().then(data => {
+          console.log(data);
+          sessionStorage.setItem('user', JSON.stringify(data));
+        })
+
+      }else if(res.status === 300){
+        Swal.fire({
+          icon : 'error',
+          title : 'Oops!!',
+          text : 'Invalid Credentials'
+        })
+      }
+    })
+
+  };
 
   const loginSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email").required("Required"),
@@ -27,6 +59,7 @@ const Login = () => {
               <Formik
                 initialValues={{ email: "", password: "" }} //specifying initial value for form
                  // function to handle form submission
+                onSubmit={handleFormSubmit}
                 validationSchema={loginSchema}
               >
                 {({ values, handleChange, handleSubmit, errors, touched }) => (

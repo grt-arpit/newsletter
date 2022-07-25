@@ -1,9 +1,12 @@
 import { Formik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import Swal from "sweetalert2";
 
 
 const Form = () => {
+
+
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem("user")));
 
   const handleFormSubmit=(formdata)=>{
     console.log(formdata);
@@ -44,7 +47,8 @@ const Form = () => {
               content: "",
               schedule: "",
               view: "",
-              createdAt:"",
+              createdAt:new Date(),
+              owner: currentUser._id,
             }}
             onSubmit={handleFormSubmit}
           >
@@ -78,17 +82,6 @@ const Form = () => {
                   onChange={handleChange}
                   
                 />
-                
-                <label className="mt-4">createdAt</label>
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="createdAt"
-                  value={values.createdAt}
-                  id="createdAt"
-                  onChange={handleChange}
-                />
-
                 <button className="btn btn-primary mt-5" type="Submit">
                   Submit
                 </button>
