@@ -35,10 +35,10 @@ const Form = () => {
   return (
     <div  style={{background: " url('https://static9.depositphotos.com/1583396/1129/i/950/depositphotos_11295068-stock-photo-blue-mail-abstract-background.jpg')", }}>
 
-    <div className="container pt-5">  
+    <div className="container p-5">  
       <div className="card">
         <div className="card-body">
-          <h3 className="text-muted text-center">SIGN UP</h3>
+          <h3 className="text-muted text-center">FORM</h3>
           <Formik
             initialValues={{
               content: "",
