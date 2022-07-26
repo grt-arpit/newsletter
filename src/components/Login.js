@@ -1,11 +1,14 @@
 import { TextField, Button } from "@mui/material";
 import { Formik } from "formik";
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
+import "./Image.css"
 
 const Login = () => {
   
+  const navigate = useNavigate();
 
   const handleFormSubmit = (formdata) => {
     console.log("Form submitted!!");
@@ -28,13 +31,15 @@ const Login = () => {
           console.log(data);
           sessionStorage.setItem('user', JSON.stringify(data));
         })
-
-      }else if(res.status === 300){
+        navigate("/Dashboard");
+      }
+      else if(res.status === 300){
         Swal.fire({
           icon : 'error',
           title : 'Oops!!',
           text : 'Invalid Credentials'
         })
+       
       }
     })
 
@@ -48,14 +53,17 @@ const Login = () => {
   });
 
   return (
-    <div style={{ background: "#eee", height: "100vh" }}>
+    <div className="bgimg  img-fluid" style={{ height: "100vh" }}>
       <div className="row h-100 justify-content-center align-items-center">
+        
         <div className="col-md-3">
           <div className="card">
+           
+              <img src="https://takingthestrain.co.uk/wp-content/uploads/2014/04/email-logo.png" className="img mt-3"/>
+            
             <div className="card-body">
               <h3 className="text-muted text-center">Log In</h3>
-              <hr />
-
+             
               <Formik
                 initialValues={{ email: "", password: "" }} //specifying initial value for form
                  // function to handle form submission
@@ -88,15 +96,19 @@ const Login = () => {
                       error={Boolean(errors.password) && touched.password}
                       helperText={touched.password ? errors.password : ""}
                     />
+                     <h6 className="text-muted ">Forgot password?</h6>
 
                     <Button
                       type="submit"
                       fullWidth
                       variant="contained"
-                      sx={{ mt: 5 }}
+                      sx={{ mt: 5 , mb:1, backgroundColor:"#054c79e6"}}
                     >
-                      Login Now
+                      Login
                     </Button>
+                    <h6 className="text-center"> 
+                    Don't have an account?<Link to="/Signup">Sign up</Link>
+                    </h6>
                   </form>
                 )}
               </Formik>

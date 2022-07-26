@@ -45,7 +45,7 @@ const Dashboard = () => {
     const deletUser=(id)=>{
       console.log(id);
 
-      fetch("http://localhost:5000/user/delete/"+id,{
+      fetch("http://localhost:5000/Suscribe/delete/"+id,{
         method: "DELETE"
       }).then(res=>{
         if(res.status===200){
@@ -62,10 +62,11 @@ const Dashboard = () => {
 
     const displayusers=()=>{
       if(!loading){
-        return userArray.map(({_id,name,email})=>(
+        return userArray.map(({_id,name,email,createdAt})=>(
           <tr>
             <td>{name}</td>
             <td>{email}</td>
+            <td>{createdAt }</td>
            
             
             <td>
@@ -73,10 +74,9 @@ const Dashboard = () => {
                 <i class="fas fa-trash"></i>
               </button>
               </td>
-             <td> <button className='btn btn-primary' onClick={e=>updateUser({_id,name,email})}>
-              <i class="fas fa-pen"></i>
-              </button>
-            </td>
+            
+              
+           
           </tr>
         ))
       }
@@ -92,6 +92,7 @@ const Dashboard = () => {
           <tr>
             <th>Name</th>
             <th>Email</th>
+            <th>creratedAt</th>
            
           </tr>
         </thead>

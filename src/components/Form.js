@@ -36,19 +36,19 @@ const Form = () => {
 
  
   return (
-    <div  style={{background: " url('https://static9.depositphotos.com/1583396/1129/i/950/depositphotos_11295068-stock-photo-blue-mail-abstract-background.jpg')", }}>
+    <div  style={{background: " url('https://image.shutterstock.com/image-photo/email-blurred-city-abstract-lights-260nw-1445689751.jpg')", backgroundSize:"cover"}}>
 
-    <div className="container p-5">  
-      <div className="card">
+    <div className="container p-5 d-flex justify-content-center align-items-center">  
+      <div className="card w-50 ">
         <div className="card-body">
-          <h3 className="text-muted text-center">FORM</h3>
+          <h5 className="text-muted text-center">Fill up the below fields to create a Newsletter</h5>
           <Formik
             initialValues={{
               content: "",
               schedule: "",
               view: "",
               createdAt:new Date(),
-              owner: currentUser._id,
+              // owner: currentUser._id,
             }}
             onSubmit={handleFormSubmit}
           >

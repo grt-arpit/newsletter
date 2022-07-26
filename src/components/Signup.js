@@ -1,5 +1,6 @@
 import { Formik } from "formik";
 import React from "react";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 
@@ -40,12 +41,15 @@ const Signup = () => {
     });
  
   return (
-    <div  style={{background: " url('https://static9.depositphotos.com/1583396/1129/i/950/depositphotos_11295068-stock-photo-blue-mail-abstract-background.jpg')", }}>
+    <div  className="signbgimg">
 
     <div className="container p-5">  
-      <div className="card">
+      <div className="card  size">
         <div className="card-body">
-          <h3 className="text-muted text-center">SIGN UP</h3>
+
+        <img src="https://i.pinimg.com/originals/8f/c3/7b/8fc37b74b608a622588fbaa361485f32.png" className="img"/>
+
+          <h3 className="text-muted text-center">Create an account</h3>
           <Formik
             initialValues={{
               username: "",
@@ -109,9 +113,10 @@ const Signup = () => {
                   onChange={handleChange}
                 />
 
-                <button className="btn btn-primary mt-5" type="Submit">
+                <button className="btn mt-5 form-control text-white" type="Submit" style={{backgroundColor:"#165ff8"}}>
                   Submit
                 </button>
+                <h6 className="text-muted text-center mt-3">Already have an account?<Link to="/Login">Login Now</Link></h6>
               </form>
             )}
           </Formik>

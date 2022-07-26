@@ -20,7 +20,7 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <a className="navbar-brand mt-2 mt-lg-0" href="#">
               <img
-                src="https://i.pinimg.com/originals/e5/3b/f0/e53bf02c0e739b9f60a6fef132599ad3.jpg"
+                src="https://i.pinimg.com/originals/8f/c3/7b/8fc37b74b608a622588fbaa361485f32.png"
                 height="35"
                 alt="MDB Logo"
                 loading="lazy"
@@ -30,13 +30,13 @@ const Header = () => {
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               
               <li className="nav-item">
-                <NavLink className="nav-link" to="signup">
+                <NavLink className="nav-link " to="signup">
                  SignUp
                 </NavLink>
               </li>
               <li className="nav-item">
               <NavLink className="nav-link" to="login">
-                 LOGIN
+                 Login
                 </NavLink>
               </li>
               
