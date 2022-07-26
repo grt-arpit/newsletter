@@ -83,11 +83,11 @@ const Dashboard = () => {
     }
 
   return (
-    <div className='container-fluid mt-5'>
-      <div className='row'>
-        <div className='col-md'>
-      
-      <table className='table table-dark'>
+    <div className='container-fluid mt-5 100vh' style={{background:"#10e8f2"}}>
+      <div className='row '>
+      <h2 className='text-center mb-4'>The Data of our current subscribers are giving here...</h2>
+        <div className='col-md d-flex justify-content-center align-items-center'>
+      <table className='table table-dark w-75 '>
         <thead>
           <tr>
             <th>Name</th>
@@ -102,7 +102,7 @@ const Dashboard = () => {
       </table>
       </div>
       
-       {showUpdateForm ? <div className='col-md'></div>:""}
+       {/* {showUpdateForm ? <div className='col-md'></div>:""} */}
 
       </div>
       </div>
