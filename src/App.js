@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Preview from './components/Preview';
 import Dashboard from './components/Dashboard';
 import Form from './components/Form';
+import Authorisor from './userAuth';
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
       <Route element={<Login/>} path="login"/>
       <Route element={<Signup/>} path="signup"/>
       <Route element={<Preview/>} path="preview"/>
-      <Route element={<Dashboard/>} path="dashboard"/>
+      <Route element={
+        <Authorisor>
+          <Dashboard/>
+        </Authorisor>
+      } path="dashboard"/>
       <Route element={<Form/>} path="form"/>
 
       <Route element={<Navigate to="login"/>} path="" />

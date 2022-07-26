@@ -56,7 +56,7 @@ const Signup = () => {
               email: "",
               password: "",
               websiteName:"",
-              createdAt:"",
+              createdAt:new Date(),
             }}
             onSubmit={handleFormSubmit}
             validationSchema={loginSchema}
@@ -103,15 +103,7 @@ const Signup = () => {
                   id="websiteName"
                   onChange={handleChange}
                 />
-                <label className="mt-4">createdAt</label>
-                <input
-                  className="form-control"
-                  type="text"
-                  placeholder="createdAt"
-                  value={values.createdAt}
-                  id="createdAt"
-                  onChange={handleChange}
-                />
+                
 
                 <button className="btn mt-5 form-control text-white" type="Submit" style={{backgroundColor:"#165ff8"}}>
                   Submit
