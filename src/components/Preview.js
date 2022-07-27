@@ -32,13 +32,14 @@ const Preview = ({ownerkey}) => {
  }
 
   return (
-    <div className="p-5 ">
-      <div className="container">
-        <h1>Key : {ownerkey}</h1>
-        <div className="card">
+    <div className="primg " style={{ height: "100vh" }}>
+      <div className="container p-5">
+        {/* <h1>Key : {ownerkey}</h1> */}
+        <div className="card col-md-8 mx-auto">
           <div className="card-body">
-            <h2>preview box heading</h2>
-            <hr />
+            <img src="https://www.freeiconspng.com/thumbs/email-icon/email-marketing-icon-email-icon-1.png" className="img1"/>
+            <h3 className="text-center">Please enter your personal info in to given the box below! </h3>
+           
             <Formik
             initialValues={{
               name:"",
@@ -56,14 +57,6 @@ const Preview = ({ownerkey}) => {
               placeholder="name"
               value={values.name}
               id="name"
-              onChange={handleChange}
-            />
-            <label className="mt-4">owner</label>
-            <input
-              className="form-control"
-              placeholder="owner"
-              value={values.owner}
-              id="owner"
               onChange={handleChange}
             />
             <label className="mt-4">Email</label>

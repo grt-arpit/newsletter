@@ -17,3 +17,13 @@
         background:  url('https://media.istockphoto.com/photos/abstract-contact-icon-symbol-in-front-of-background-picture-id1300469481?k=20&m=1300469481&s=612x612&w=0&h=4xDfA2PY9PvXs0cPydDDspYqzz5k9vBKcgQe4PImb-s=');
         background-size: cover;
 }
+
+.primg{
+    background: url('https://img.freepik.com/premium-vector/glowing-neon-line-mail-email-icon-isolated-brick-wall-background-envelope-symbol-email-email-message-sign-colorful-outline-concept-vector_549897-614.jpg');
+    background-size: cover;
+}
+.img1{
+    margin:auto;
+    height:200px;
+    display: block;
+}

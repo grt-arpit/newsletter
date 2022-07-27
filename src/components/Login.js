@@ -37,9 +37,9 @@ const Login = () => {
         Swal.fire({
           icon : 'error',
           title : 'Oops!!',
-          text : 'Invalid Credentials'
+          text : 'Invalid Credentials or You dont have an account Sing up now'
         })
-       
+       navigate("/Signup");
       }
     })
 

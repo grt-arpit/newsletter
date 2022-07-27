@@ -36,7 +36,7 @@ const Form = () => {
 
  
   return (
-    <div  style={{background: " url('https://image.shutterstock.com/image-photo/email-blurred-city-abstract-lights-260nw-1445689751.jpg')", backgroundSize:"cover"}}>
+    <div  style={{background: " url('https://image.shutterstock.com/image-photo/email-blurred-city-abstract-lights-260nw-1445689751.jpg')", backgroundSize:"cover",height: "100vh" }}>
 
     <div className="container p-5 d-flex justify-content-center align-items-center">  
       <div className="card w-50 ">

@@ -1,10 +1,12 @@
 import { Formik } from "formik";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import * as Yup from "yup";
 
 const Signup = () => {
+
+  const navigate = useNavigate()
 
   const handleFormSubmit=(formdata)=>{
     console.log(formdata);
@@ -20,8 +22,9 @@ const Signup = () => {
         Swal.fire({
           icon: "success",
           title: "Success",
-          text: "Sign Up successful",
+          text: "Sign Up successful/Login please ",
         });
+      navigate("/Login");
       }else{
         Swal.fire({
           icon: "error",
