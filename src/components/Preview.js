@@ -38,7 +38,7 @@ const Preview = ({ownerkey}) => {
         <div className="card col-md-8 mx-auto">
           <div className="card-body">
             <img src="https://www.freeiconspng.com/thumbs/email-icon/email-marketing-icon-email-icon-1.png" className="img1"/>
-            <h3 className="text-center">Please enter your personal info in to given the box below! </h3>
+            <h3 className="text-center">Please enter your personal info into the given box below! </h3>
            
             <Formik
             initialValues={{

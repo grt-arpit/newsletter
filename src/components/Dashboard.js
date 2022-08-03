@@ -95,9 +95,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="container-fluid" style={{ background: "#10e8f2"  ,height: "100vh" }}>
+    <div className="container-fluid" style={{ background: "url('https://live.staticflickr.com/2258/2281971470_31ed45f483_b.jpg')"  ,height: "100vh" }}>
       <h2>Owner ID : {currentUser._id}</h2>
-      <h4>To Use Plugin Copy the COde Below : </h4>
+      <h4><marquee>To Use Plugin Copy the Code Below : </marquee></h4>
       <pre>
         <code>
           {/* <div id="preview" owner-id="62c80bc60fb39436c91beaba"></div> */}
@@ -118,7 +118,7 @@ const Dashboard = () => {
           <tbody>{displayusers()}</tbody>
         </table>
 
-        <div className="card">
+        <div className="card bgcard">
           <div className="card-body">
             <input
               className="form-control"
@@ -131,8 +131,8 @@ const Dashboard = () => {
               rows="10"
               onChange={(e) => setLetterContent(e.target.value)}
             ></textarea>
-            <button className="btn btn-primary mt-4" onClick={sendNewsLetter}>
-              Send
+            <button className="but text-white mt-4 form-control" onClick={sendNewsLetter}>
+              SEND  
             </button>
           </div>
         </div>
