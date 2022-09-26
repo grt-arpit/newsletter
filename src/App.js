@@ -21,7 +21,7 @@ function App() {
       <Route element={
         <Authorisor>
           <Dashboard/>
-        </Authorisor>
+        </Authorisor> 
       } path="dashboard"/>
       <Route element={<Form/>} path="form"/>
 
@@ -31,6 +31,6 @@ function App() {
      </BrowserRouter>
     </div>
   );
-}
+}   
 
 export default App;
